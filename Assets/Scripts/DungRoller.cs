@@ -9,22 +9,30 @@ public class DungRoller : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    private Timer timer;
+
     private int dungRotation = 0;
+
+    public AudioSource audioSource;
+    public AudioClip clip;
+    public float targetTime = 1.0f;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //timer = new Timer(1);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //timer.Tick(Time.deltaTime);
-        //if(!timer.IsDone())
-        //{
+
+        targetTime -= Time.deltaTime;
+
+        if (targetTime <= 0.0f)
+        {
+            timerEnded();
+            targetTime = 1f;
+        }
 
         dungRotation -= 1;
 
@@ -34,4 +42,11 @@ public class DungRoller : MonoBehaviour
         transform.position = new Vector3(player.transform.position.x + 2f, transform.position.y);
             //player.transform.position + new Vector3(player.transform.position.x + 0.05f, player.transform.position.y);
     }
+
+    void timerEnded()
+    {
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
+
 }

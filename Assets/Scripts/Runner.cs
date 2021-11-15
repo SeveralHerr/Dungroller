@@ -16,10 +16,10 @@ public class Runner : MonoBehaviour
         var newPosition = new Vector2(transform.position.x - moveSpeed, transform.position.y);
         rigidbody2d.MovePosition(newPosition);
 
-        //if(transform.position.x == Constants.LaneEnd)
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (transform.position.x <= Constants.LaneEnd)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
