@@ -25,7 +25,6 @@ public class DungRoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         targetTime -= Time.deltaTime;
 
         if (targetTime <= 0.0f)
@@ -36,11 +35,8 @@ public class DungRoller : MonoBehaviour
 
         dungRotation -= 1;
 
-        
-
         transform.rotation = Quaternion.Euler(Vector3.forward * dungRotation);
         transform.position = new Vector3(player.transform.position.x + 2f, transform.position.y);
-            //player.transform.position + new Vector3(player.transform.position.x + 0.05f, player.transform.position.y);
     }
 
     void timerEnded()
