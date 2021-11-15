@@ -216,7 +216,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
 --- !u!1 &29562411
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421445443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.28, y: 0.5, z: 1}
   m_Children: []
@@ -875,6 +875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laneObjects:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
+  - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
+  objectTimer: 1
 --- !u!1 &1522483252
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,6 +986,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laneObjects:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
+  - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
+  - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
+  objectTimer: 1
 --- !u!1 &1647870044
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Runner : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     public float moveSpeed = .001f;
+    public bool isScenery = false;
 
     private void Start()
     {
@@ -24,6 +25,10 @@ public class Runner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(isScenery)
+        {
+            return;
+        }
 
         if (collision.gameObject.tag == "Player")
         {
