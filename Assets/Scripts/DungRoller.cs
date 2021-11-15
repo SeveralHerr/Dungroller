@@ -31,7 +31,7 @@ public class DungRoller : MonoBehaviour
         
 
         transform.rotation = Quaternion.Euler(Vector3.forward * dungRotation);
-        transform.position = new Vector3(player.transform.position.x + 3f, transform.position.y);
+        transform.position = new Vector3(player.transform.position.x + 2f, transform.position.y);
             //player.transform.position + new Vector3(player.transform.position.x + 0.05f, player.transform.position.y);
     }
 }
