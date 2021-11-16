@@ -7,6 +7,7 @@ public class Runner : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public float moveSpeed = .001f;
     public bool isScenery = false;
+    public bool isAddsToPoop = false;
 
     private void Start()
     {
@@ -27,6 +28,16 @@ public class Runner : MonoBehaviour
     {
         if(isScenery)
         {
+            return;
+        }
+
+        if(isAddsToPoop)
+        {
+            var scale = DungRoller.Instance.transform.localScale;
+            var newScale = new Vector3(scale.x + 0.2f, scale.y + 0.2f, scale.z + 0.2f);
+            DungRoller.Instance.transform.localScale = newScale;
+
+            Destroy(gameObject);
             return;
         }
 

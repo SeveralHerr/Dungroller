@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4653283250359821621}
   - component: {fileID: -1841823916481150073}
   - component: {fileID: -7579231970299315220}
-  - component: {fileID: -3048338528433701150}
+  - component: {fileID: 7780712289281820535}
   m_Layer: 0
-  m_Name: Gum
+  m_Name: DungChunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 310c30724c149f946a86d5af50d5ee9d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f16d9a2c0271d69438de751275c86d94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
   isScenery: 0
-  isAddsToPoop: 0
+  isAddsToPoop: 1
 --- !u!50 &-7579231970299315220
 Rigidbody2D:
   serializedVersion: 4
@@ -121,7 +121,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &-3048338528433701150
+--- !u!61 &7780712289281820535
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,16 +134,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.102331996, y: -0.5969371}
+  m_Offset: {x: -0.064034045, y: -0.5995439}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.2, y: 3.2}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 3.2, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.599652, y: 1.2011131}
+  m_Size: {x: 1.1416668, y: 0.5651741}
   m_EdgeRadius: 0

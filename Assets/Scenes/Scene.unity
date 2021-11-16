@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: 0
   player: {fileID: 2678544}
+  dungColliderObject: {fileID: 0}
   audioSource: {fileID: 670419684}
   clip: {fileID: 8300000, guid: d722be4a60c3a3a4a9663c50343cb4a5, type: 3}
   targetTime: 1
@@ -677,7 +678,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6700855}
+  m_Offset: {x: 0, y: -0.61265403}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -688,7 +689,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9253559, y: 1.2552708}
+  m_Size: {x: 1.9253559, y: 1.1404079}
   m_EdgeRadius: 0
 --- !u!1 &889634811
 GameObject:
@@ -801,6 +802,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
+  - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
   objectTimer: 3
 --- !u!1 &1421445443
 GameObject:
@@ -912,6 +914,8 @@ MonoBehaviour:
   laneObjects:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
+  - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
+  - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
   objectTimer: 3
 --- !u!1 &1522483252
 GameObject:
@@ -1024,6 +1028,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
+  - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
   objectTimer: 3
 --- !u!1 &1647870044
 GameObject:
