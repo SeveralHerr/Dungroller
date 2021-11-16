@@ -792,14 +792,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889634811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 750bcf71de01f2b42add5b0d569c3686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   laneObjects:
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
-  objectTimer: 0
+  - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
+  - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
+  objectTimer: 3
 --- !u!1 &1421445443
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +912,7 @@ MonoBehaviour:
   laneObjects:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
-  objectTimer: 1
+  objectTimer: 3
 --- !u!1 &1522483252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1024,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
-  objectTimer: 1
+  objectTimer: 3
 --- !u!1 &1647870044
 GameObject:
   m_ObjectHideFlags: 0
