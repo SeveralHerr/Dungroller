@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dc51e0680476c478a876e42d7bce8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rigidbody2d: {fileID: -7579231970299315220}
   moveSpeed: 0.1
   isScenery: 0
+  isAddsToPoop: 0
 --- !u!50 &-7579231970299315220
 Rigidbody2D:
   serializedVersion: 4

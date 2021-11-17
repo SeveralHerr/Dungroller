@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DungRoller : MonoBehaviour
+public class DungRoller : SingletonMonobehavior<DungRoller>
 {
     public int rotation;
 
     [SerializeField]
     private GameObject player;
+
+    [SerializeField]
+    private GameObject dungColliderObject;
 
 
     private int dungRotation = 0;
