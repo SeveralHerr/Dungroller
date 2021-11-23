@@ -8,14 +8,19 @@ public class HandDropper : MonoBehaviour
     private Vector3 targetlocation;
     public Transform playertransform;
 
+    public GameObject shadow;
+
     private bool wasHandDown = false;
 
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         targetlocation = playertransform.position;
-        var initialhandpos = new Vector3(targetlocation.x + 10, 17);
+        var initialhandpos = new Vector3(targetlocation.x + 3, 17);
         transform.position = initialhandpos;
+
+        var shadowPosition = new Vector3(targetlocation.x, targetlocation.y + 1.5f);
+        Instantiate(shadow, shadowPosition, Quaternion.identity); 
     }
     private void Update()
     {
@@ -45,6 +50,7 @@ public class HandDropper : MonoBehaviour
     {
         if(Player.Instance.HitPlayer(collision.tag))
         {
+            Destroy(shadow.gameObject);
             Player.Instance.DestroyPlayer();
         }
     }
