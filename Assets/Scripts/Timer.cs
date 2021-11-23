@@ -1,33 +1,25 @@
-public class Timer
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Timer : MonoBehaviour
 {
-    public float RemainingSeconds { get; private set; }
-    private float Duration { get; set; }
-
-    public bool IsDone() => RemainingSeconds == 0;
-
-    public Timer(float duration)
+    public Text timerText;
+    private float startTime;
+    void Start()
     {
-        RemainingSeconds = duration;
-        Duration = duration;
+        startTime = Time.time;
     }
 
-    public void Tick(float deltaTime)
+    // Update is called once per frame
+    void Update()
     {
-        if (RemainingSeconds == 0) { return; }
+        float t = Time.time - startTime;
 
-        RemainingSeconds -= deltaTime;
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f0");
 
-        CheckForTimerEnd();
-    }
-
-    private void CheckForTimerEnd()
-    {
-        if (RemainingSeconds > 0f) { return; }
-
-        RemainingSeconds = 0f;
-    }
-    public void ResetTimer()
-    {
-        RemainingSeconds = Duration;
+        timerText.text = minutes + ":" + seconds;
     }
 }
