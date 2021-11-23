@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     private int currentLane;
 
     public GameObject dung;
+    public GameObject dungCollider;
+    private const float horizontalMovement = 1f;
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
                 currentLane += 1;
                 transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
                 dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
+                //dungCollider.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
             }
         }
 
@@ -33,7 +36,34 @@ public class PlayerMovement : MonoBehaviour
                 currentLane -= 1;
                 transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
                 dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
+                //dungCollider.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            var isOutOfBounds = transform.position.x - horizontalMovement;
+            if(isOutOfBounds <= -10.21f)
+            {
+                return;
+            }
+
+            transform.position = new Vector3(transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
+            dung.transform.position = new Vector3(dung.transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
+            //dungCollider.transform.position = new Vector3(dung.transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            var isOutOfBounds = transform.position.x + horizontalMovement;
+            if (isOutOfBounds >= 10.17f)
+            {
+                return;
+            }
+
+            transform.position = new Vector3(transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
+            dung.transform.position = new Vector3(dung.transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
+            //dungCollider.transform.position = new Vector3(dung.transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
         }
     }
 }

@@ -136,6 +136,8 @@ GameObject:
   - component: {fileID: 2678547}
   - component: {fileID: 2678549}
   - component: {fileID: 2678550}
+  - component: {fileID: 2678548}
+  - component: {fileID: 2678551}
   m_Layer: 0
   m_Name: Beetle
   m_TagString: Player
@@ -237,6 +239,7 @@ MonoBehaviour:
   - {fileID: 1522483252}
   - {fileID: 889634811}
   dung: {fileID: 689107718}
+  dungCollider: {fileID: 670419679}
 --- !u!95 &2678549
 Animator:
   serializedVersion: 3
@@ -269,6 +272,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1565368289}
+--- !u!61 &2678551
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2678544}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4250538, y: -0.3389117}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.4264684, y: 1.3221766}
+  m_EdgeRadius: 0
 --- !u!1 &29562411
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &280584186
 MonoBehaviour:
@@ -573,7 +602,7 @@ RectTransform:
   m_Children:
   - {fileID: 1565368288}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -883,7 +912,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689107718}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
