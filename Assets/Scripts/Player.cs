@@ -31,8 +31,14 @@ public class Player : SingletonMonobehavior<Player>
         gameOverPrefab.SetActive(true);
     }
 
-    public Vector3 Position()
+    public Vector3? Position()
     {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        if(player == null)
+        {
+            return null;
+        }
+
         return GameObject.FindGameObjectWithTag("Player").transform.position;
     }
 }

@@ -14,10 +14,15 @@ public class HandDropper : MonoBehaviour
 
     void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
-        targetlocation = Player.Instance.Position();
+        if (Player.Instance.Position() == null)
+        {
+            Destroy(gameObject);
+        }
 
-        var initialhandpos = new Vector3(targetlocation.x + 3, 17);
+        rigidbody2d = GetComponent<Rigidbody2D>();
+        targetlocation = Player.Instance.Position().GetValueOrDefault();
+
+        var initialhandpos = new Vector3(targetlocation.x + 0.5f, 17);
         transform.position = initialhandpos;
 
         var shadowPosition = new Vector3(targetlocation.x, -0.38f);
