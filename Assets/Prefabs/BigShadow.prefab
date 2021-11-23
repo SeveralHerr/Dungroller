@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7788033741094626859}
   m_Layer: 0
   m_Name: BigShadow
-  m_TagString: Untagged
+  m_TagString: Shadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
