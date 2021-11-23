@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Dung
+  - PlayerParts
+  - GameOver
+  - Shadow
   layers:
   - Default
   - TransparentFX
