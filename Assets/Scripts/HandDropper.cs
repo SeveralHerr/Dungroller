@@ -15,17 +15,17 @@ public class HandDropper : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
-        targetlocation = Player.Instance.transform.position;
-        Debug.Log(Player.Instance.transform.position.x + "," + Player.Instance.transform.position.y);
+        targetlocation = Player.Instance.Position();
+
         var initialhandpos = new Vector3(targetlocation.x + 3, 17);
         transform.position = initialhandpos;
 
-        var shadowPosition = new Vector3(targetlocation.x, targetlocation.y + 1.5f);
+        var shadowPosition = new Vector3(targetlocation.x, -0.38f);
         Instantiate(shadow, shadowPosition, Quaternion.identity); 
     }
     private void Update()
     {
-        if (transform.position.y <= 3.3f && !wasHandDown)
+        if (transform.position.y <= 3.35f && !wasHandDown)
         {
             wasHandDown = true;
             return;

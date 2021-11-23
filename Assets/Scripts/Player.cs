@@ -30,4 +30,9 @@ public class Player : SingletonMonobehavior<Player>
     {
         gameOverPrefab.SetActive(true);
     }
+
+    public Vector3 Position()
+    {
+        return GameObject.FindGameObjectWithTag("Player").transform.position;
+    }
 }
