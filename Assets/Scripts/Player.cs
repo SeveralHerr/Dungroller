@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Player : SingletonMonobehavior<Player> 
 {
+    public GameObject gameOverPrefab;
+
     public void DestroyPlayer()
     {
         var playerParts = GameObject.FindGameObjectsWithTag("PlayerParts");
@@ -15,10 +17,17 @@ public class Player : SingletonMonobehavior<Player>
         {
             Destroy(item.gameObject);
         }
+
+        DisplayGameOverScreen();
     }
 
     public bool HitPlayer(string tag)
     {
         return tag == "Player" || tag == "PlayerParts";
+    }
+
+    private void DisplayGameOverScreen()
+    {
+        gameOverPrefab.SetActive(true);
     }
 }

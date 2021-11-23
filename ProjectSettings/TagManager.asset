@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Dung
   - PlayerParts
+  - GameOver
   layers:
   - Default
   - TransparentFX
