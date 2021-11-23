@@ -1,39 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : SingletonMonobehavior<Player> 
 {
-    public List<GameObject> lanes;
-    private int currentLane;
-
-    public GameObject dung;
-
-    private void Start()
+    public void DestroyPlayer()
     {
-        currentLane = 1;
+        var playerParts = GameObject.FindGameObjectsWithTag("PlayerParts");
+        foreach (var item in playerParts)
+        {
+            Destroy(item.gameObject);
+        }
+
+        var playerGroup = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var item in playerGroup)
+        {
+            Destroy(item.gameObject);
+        }
     }
 
-    private void Update()
+    public bool HitPlayer(string tag)
     {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            if(currentLane < lanes.Count-1)
-            {
-                currentLane += 1;
-                transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
-                dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            if (currentLane > 0)
-            {
-                currentLane -= 1;
-                transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
-                dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
-            }
-        }
+        return tag == "Player" || tag == "PlayerParts";
     }
 }

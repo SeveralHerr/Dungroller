@@ -41,13 +41,9 @@ public class Runner : MonoBehaviour
             return;
         }
 
-        if (collision.gameObject.tag == "Player")
+        if (Player.Instance.HitPlayer(collision.tag))
         {
-            var playerGroup = GameObject.FindGameObjectsWithTag("Player");
-            foreach(var item in playerGroup)
-            {
-                Destroy(item.gameObject);
-            }
+            Player.Instance.DestroyPlayer();
         }
 
         Destroy(gameObject);

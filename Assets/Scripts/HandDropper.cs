@@ -43,13 +43,9 @@ public class HandDropper : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if(Player.Instance.HitPlayer(collision.tag))
         {
-            var playerGroup = GameObject.FindGameObjectsWithTag("Player");
-            foreach (var item in playerGroup)
-            {
-                Destroy(item.gameObject);
-            }
+            Player.Instance.DestroyPlayer();
         }
     }
 }

@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 2678546}
   - component: {fileID: 2678545}
   - component: {fileID: 2678547}
-  - component: {fileID: 2678548}
   - component: {fileID: 2678549}
   - component: {fileID: 2678550}
   m_Layer: 0
@@ -230,7 +229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2678544}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2775e5b2d5b564f42a5b34cbdd8d6de0, type: 3}
+  m_Script: {fileID: 11500000, guid: a7312316e41a9004897c62442071a0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lanes:
@@ -551,7 +550,7 @@ GameObject:
   - component: {fileID: 670419684}
   m_Layer: 0
   m_Name: Dung
-  m_TagString: Player
+  m_TagString: PlayerParts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,6 +755,49 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!1 &676750397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676750398}
+  - component: {fileID: 676750399}
+  m_Layer: 0
+  m_Name: PlayerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676750398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676750397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.11785, y: 1.5880833, z: -131.09753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &676750399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676750397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2775e5b2d5b564f42a5b34cbdd8d6de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &689107718
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +810,7 @@ GameObject:
   - component: {fileID: 689107720}
   m_Layer: 0
   m_Name: DungCollider
-  m_TagString: Player
+  m_TagString: PlayerParts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
