@@ -34,7 +34,7 @@ public class Runner : MonoBehaviour
         if(isAddsToPoop)
         {
             var scale = DungRoller.Instance.transform.localScale;
-            var newScale = new Vector3(scale.x + 0.2f, scale.y + 0.2f, scale.z + 0.2f);
+            var newScale = new Vector3(scale.x + 0.03f, scale.y + 0.03f, scale.z + 0.03f);
             DungRoller.Instance.transform.localScale = newScale;
 
             Destroy(gameObject);

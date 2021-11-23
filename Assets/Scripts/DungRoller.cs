@@ -13,7 +13,7 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
     private GameObject dungColliderObject;
 
 
-    private int dungRotation = 0;
+    private float dungRotation = 0;
 
     public AudioSource audioSource;
     public AudioClip clip;
@@ -36,7 +36,7 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
             targetTime = 1f;
         }
 
-        dungRotation -= 1;
+        dungRotation -= 0.5f;
 
         transform.rotation = Quaternion.Euler(Vector3.forward * dungRotation);
         transform.position = new Vector3(player.transform.position.x + 2f, transform.position.y);
