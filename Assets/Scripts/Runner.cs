@@ -5,7 +5,7 @@ using UnityEngine;
 public class Runner : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
-    public float moveSpeed = .001f;
+
     public bool isScenery = false;
     public bool isAddsToPoop = false;
 
@@ -17,7 +17,7 @@ public class Runner : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        var newPosition = new Vector2(transform.position.x - moveSpeed, transform.position.y);
+        var newPosition = new Vector2(transform.position.x - Settings.Instance.GlobalMoveSpeed, transform.position.y);
         rigidbody2d.MovePosition(newPosition);
 
         if (transform.position.x <= Constants.LaneEnd)
@@ -33,7 +33,7 @@ public class Runner : MonoBehaviour
             return;
         }
 
-        if(isAddsToPoop)// && transform.tag == "Dung" && Player.Instance.HitPlayer(collision.tag))
+        if(isAddsToPoop)
         {
             if(DungRoller.Instance == null )
             {
@@ -46,9 +46,9 @@ public class Runner : MonoBehaviour
 
             Settings.Instance.DungTotal++;
 
-            gameObject.SetActive(false);
+            
             audioSource.Play();
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 0.2f);
 
             return;
         }
