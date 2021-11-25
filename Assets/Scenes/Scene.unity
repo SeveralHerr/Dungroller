@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2678544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.01, y: -1.88, z: 0}
+  m_LocalPosition: {x: -10.01, y: -1.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 689107719}
@@ -1071,6 +1071,8 @@ GameObject:
   m_Component:
   - component: {fileID: 899894047}
   - component: {fileID: 899894046}
+  - component: {fileID: 899894048}
+  - component: {fileID: 899894049}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -1105,6 +1107,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &899894048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899894045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d7d7880bd36a8643815188e180f7ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2678549}
+  goldAnimationController: {fileID: 9100000, guid: cb3405749e4e75847837e3276baff2a7, type: 2}
+  goldTimer: 200
+--- !u!114 &899894049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899894045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a8abcfff9321246809c5744d427ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldDung: {fileID: 21300000, guid: 350fd395af7620143901c875e50e2c54, type: 3}
+  goldDungLighting: {fileID: 21300000, guid: 1fa8fad3ce22a9f4fbe88888f207dd7e, type: 3}
+  dung: {fileID: 670419680}
+  dungLighting: {fileID: 1320609650}
+  goldTimer: 500
 --- !u!4 &953439115 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4063452920466942836, guid: a705f933770f96b4189af80cdf2a66ae, type: 3}

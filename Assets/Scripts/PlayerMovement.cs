@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 ChangePosition(Transform transform, float horizontalMovement = 0)
     {
-        return new Vector3(transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
+        return new Vector3(transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y + 0.3f);
     }
 
     private void ChangePosition(float horizontalMovement = 0)
