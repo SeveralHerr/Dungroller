@@ -26,10 +26,10 @@ public class Timer : SingletonMonobehavior<Timer>
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("00");
 
-        timerText.text = minutes + ":" + seconds;
+        timerText.text = $"{minutes}:{seconds}";
         dungText.text = Settings.Instance.DungTotal.ToString();
 
         var score = Mathf.Round(t * Settings.Instance.DungTotal);
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"{score}";
     }
 }
