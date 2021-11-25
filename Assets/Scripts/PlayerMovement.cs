@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public List<GameObject> lanes;
     private int currentLane;
 
-    public GameObject dung;
-    public GameObject dungCollider;
     private const float horizontalMovement = 1f;
 
     private void Start()
@@ -23,9 +21,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentLane < lanes.Count - 1)
             {
                 currentLane += 1;
-                transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
-                dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
-                //dungCollider.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
+                ChangePosition();
             }
         }
 
@@ -34,9 +30,7 @@ public class PlayerMovement : MonoBehaviour
             if (currentLane > 0)
             {
                 currentLane -= 1;
-                transform.position = new Vector3(transform.position.x, lanes[currentLane].transform.position.y);
-                dung.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
-                //dungCollider.transform.position = new Vector3(dung.transform.position.x, lanes[currentLane].transform.position.y);
+                ChangePosition();
             }
         }
 
@@ -48,9 +42,7 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            transform.position = new Vector3(transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
-            dung.transform.position = new Vector3(dung.transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
-            //dungCollider.transform.position = new Vector3(dung.transform.position.x - horizontalMovement, lanes[currentLane].transform.position.y);
+            ChangePosition(horizontalMovement * -1);
         }
         
         if (Input.GetKeyDown(KeyCode.D))
@@ -61,9 +53,17 @@ public class PlayerMovement : MonoBehaviour
                 return;
             }
 
-            transform.position = new Vector3(transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
-            dung.transform.position = new Vector3(dung.transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
-            //dungCollider.transform.position = new Vector3(dung.transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y);
+            ChangePosition(horizontalMovement);
         }
+    }
+
+    private Vector3 ChangePosition(Transform transform, float horizontalMovement = 0)
+    {
+        return new Vector3(transform.position.x + horizontalMovement, lanes[currentLane].transform.position.y + 0.3f);
+    }
+
+    private void ChangePosition(float horizontalMovement = 0)
+    {
+        transform.position = ChangePosition(transform, horizontalMovement);
     }
 }

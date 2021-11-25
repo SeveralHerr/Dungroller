@@ -5,9 +5,11 @@ using UnityEngine;
 public class Runner : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
-    public float moveSpeed = .001f;
+
     public bool isScenery = false;
     public bool isAddsToPoop = false;
+
+    public AudioSource audioSource;
 
     private void Start()
     {
@@ -15,7 +17,7 @@ public class Runner : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        var newPosition = new Vector2(transform.position.x - moveSpeed, transform.position.y);
+        var newPosition = new Vector2(transform.position.x - Settings.Instance.GlobalMoveSpeed, transform.position.y);
         rigidbody2d.MovePosition(newPosition);
 
         if (transform.position.x <= Constants.LaneEnd)
@@ -31,7 +33,7 @@ public class Runner : MonoBehaviour
             return;
         }
 
-        if(isAddsToPoop)
+        if(isAddsToPoop && Player.Instance.HitPlayer(collision.tag))
         {
             if(DungRoller.Instance == null )
             {
@@ -41,8 +43,14 @@ public class Runner : MonoBehaviour
             var scale = DungRoller.Instance.transform.localScale;
             var newScale = new Vector3(scale.x + 0.03f, scale.y + 0.03f, scale.z + 0.03f);
             DungRoller.Instance.transform.localScale = newScale;
+            DungRoller.Instance.dungLighting.transform.localScale = newScale;
 
-            Destroy(gameObject);
+            Settings.Instance.DungTotal++;
+
+            
+            audioSource.Play();
+            Destroy(gameObject, 0.2f);
+
             return;
         }
 

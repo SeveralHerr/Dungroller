@@ -10,13 +10,11 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
     private GameObject player;
 
     [SerializeField]
-    private GameObject dungColliderObject;
+    public GameObject dungLighting;
 
 
     private float dungRotation = 0;
 
-    public AudioSource audioSource;
-    public AudioClip clip;
     public float targetTime = 1.0f;
 
 
@@ -39,13 +37,14 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
         dungRotation -= 0.5f;
 
         transform.rotation = Quaternion.Euler(Vector3.forward * dungRotation);
-        transform.position = new Vector3(player.transform.position.x + 2f, transform.position.y);
+        transform.position = new Vector3(player.transform.position.x + 1.3f, transform.position.y);
+
+        dungLighting.transform.position = new Vector3(player.transform.position.x + 1.3f, transform.position.y);
     }
 
     void timerEnded()
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+
     }
 
 }
