@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public List<GameObject> lanes;
     private int currentLane;
 
-    public GameObject dung;
-    public GameObject dungCollider;
     private const float horizontalMovement = 1f;
 
     private void Start()
@@ -67,6 +65,5 @@ public class PlayerMovement : MonoBehaviour
     private void ChangePosition(float horizontalMovement = 0)
     {
         transform.position = ChangePosition(transform, horizontalMovement);
-        dung.transform.position = ChangePosition(dung.transform, horizontalMovement);
     }
 }

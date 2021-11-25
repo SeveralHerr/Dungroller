@@ -33,7 +33,7 @@ public class Runner : MonoBehaviour
             return;
         }
 
-        if(isAddsToPoop)
+        if(isAddsToPoop && Player.Instance.HitPlayer(collision.tag))
         {
             if(DungRoller.Instance == null )
             {
@@ -43,6 +43,7 @@ public class Runner : MonoBehaviour
             var scale = DungRoller.Instance.transform.localScale;
             var newScale = new Vector3(scale.x + 0.03f, scale.y + 0.03f, scale.z + 0.03f);
             DungRoller.Instance.transform.localScale = newScale;
+            DungRoller.Instance.dungLighting.transform.localScale = newScale;
 
             Settings.Instance.DungTotal++;
 

@@ -6,13 +6,13 @@ public class CrusherManager : MonoBehaviour
 {
     public GameObject hand;
 
-    public float objectTimer;
+    public float summonHandTimer;
     private float currentTimer;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentTimer = objectTimer;
+        currentTimer = summonHandTimer;
     }
 
     // Update is called once per frame
@@ -21,12 +21,11 @@ public class CrusherManager : MonoBehaviour
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0.0f)
         {
-            // how can we make this a bool instead of an int??
-            var skip = Random.Range(0, 1);
+            var skip = Random.Range(0, 2);
             if (skip == 0)
             {
                 timerEnded();
-                currentTimer = objectTimer;
+                currentTimer = summonHandTimer;
             }
         }
         

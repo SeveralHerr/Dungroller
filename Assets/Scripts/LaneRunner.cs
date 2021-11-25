@@ -18,7 +18,6 @@ public class LaneRunner : MonoBehaviour
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0.0f)
         {
-            // how can we make this a bool instead of an int??
             var skip = Random.Range(0, 1); 
             if(skip == 0)
             {
