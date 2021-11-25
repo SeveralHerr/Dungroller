@@ -7,6 +7,7 @@ public class HandDropper : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     private Vector3 targetlocation;
+    public AudioSource audioSource;
 
     public GameObject shadow;
 
@@ -14,6 +15,7 @@ public class HandDropper : MonoBehaviour
 
     void Start()
     {
+        wasHandDown = false;
         if (Player.Instance.Position() == null)
         {
             Destroy(gameObject);
@@ -33,12 +35,12 @@ public class HandDropper : MonoBehaviour
         if (transform.position.y <= 3.35f && !wasHandDown)
         {
             wasHandDown = true;
+
             return;
         }
 
         if (wasHandDown)
         {
-            // fuck you
             var movementSpeed = 0.2f;
             var newPos = new Vector2(transform.position.x, transform.position.y + movementSpeed);
             rigidbody2d.MovePosition(newPos);
@@ -47,12 +49,15 @@ public class HandDropper : MonoBehaviour
             {
                 var shdw = GameObject.FindGameObjectWithTag("Shadow");
                 Destroy(shdw);
+
                 Destroy(gameObject);
             }
 
             return;
         }
-       
+
+        audioSource.Play();
+
         var newPosition = new Vector2(transform.position.x, transform.position.y - .2f);
         rigidbody2d.MovePosition(newPosition);
     }
@@ -61,10 +66,7 @@ public class HandDropper : MonoBehaviour
     {
         if(Player.Instance.HitPlayer(collision.tag))
         {
-           
             Player.Instance.DestroyPlayer();
         }
     }
 }
-
-//var newPosition = new Vector2(transform.position.x - moveSpeed, transform.position.y);

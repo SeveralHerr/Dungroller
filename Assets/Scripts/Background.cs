@@ -23,7 +23,7 @@ public class Background : MonoBehaviour
         {
             var newBackgroundPosition = new Vector2(31, transform.position.y);
             Transform parent;
-            Debug.Log(gameObject.transform.parent);
+
             if (gameObject.transform.tag == "Lane")
             {
                 parent = GameObject.FindGameObjectWithTag("Lane").transform;
