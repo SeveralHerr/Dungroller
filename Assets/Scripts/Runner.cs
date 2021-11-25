@@ -9,6 +9,8 @@ public class Runner : MonoBehaviour
     public bool isScenery = false;
     public bool isAddsToPoop = false;
 
+    public AudioSource audioSource;
+
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -31,7 +33,7 @@ public class Runner : MonoBehaviour
             return;
         }
 
-        if(isAddsToPoop)
+        if(isAddsToPoop)// && transform.tag == "Dung" && Player.Instance.HitPlayer(collision.tag))
         {
             if(DungRoller.Instance == null )
             {
@@ -43,7 +45,11 @@ public class Runner : MonoBehaviour
             DungRoller.Instance.transform.localScale = newScale;
 
             Settings.Instance.DungTotal++;
-            Destroy(gameObject);
+
+            gameObject.SetActive(false);
+            audioSource.Play();
+            Destroy(gameObject, 1f);
+
             return;
         }
 

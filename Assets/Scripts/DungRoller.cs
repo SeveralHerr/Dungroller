@@ -15,8 +15,6 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
 
     private float dungRotation = 0;
 
-    public AudioSource audioSource;
-    public AudioClip clip;
     public float targetTime = 1.0f;
 
 
@@ -44,8 +42,7 @@ public class DungRoller : SingletonMonobehavior<DungRoller>
 
     void timerEnded()
     {
-        audioSource.clip = clip;
-        audioSource.Play();
+
     }
 
 }
