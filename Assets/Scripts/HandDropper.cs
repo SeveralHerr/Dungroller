@@ -41,7 +41,7 @@ public class HandDropper : MonoBehaviour
 
         if (wasHandDown)
         {
-            var movementSpeed = 0.2f;
+            var movementSpeed = 0.4f;
             var newPos = new Vector2(transform.position.x, transform.position.y + movementSpeed);
             rigidbody2d.MovePosition(newPos);
 
