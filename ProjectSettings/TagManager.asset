@@ -8,6 +8,10 @@ TagManager:
   - PlayerParts
   - GameOver
   - Shadow
+  - Lane
+  - Lane1
+  - Lane2
+  - Lane3
   layers:
   - Default
   - TransparentFX

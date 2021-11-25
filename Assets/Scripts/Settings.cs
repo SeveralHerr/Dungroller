@@ -5,4 +5,5 @@ using UnityEngine;
 public class Settings : SingletonMonobehavior<Settings>
 {
     public float GlobalMoveSpeed = 0.1f;
+    public float DungTotal = 1;
 }

@@ -42,6 +42,7 @@ public class Runner : MonoBehaviour
             var newScale = new Vector3(scale.x + 0.03f, scale.y + 0.03f, scale.z + 0.03f);
             DungRoller.Instance.transform.localScale = newScale;
 
+            Settings.Instance.DungTotal++;
             Destroy(gameObject);
             return;
         }

@@ -12,6 +12,7 @@ public class Background : MonoBehaviour
     private void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+
     }
     private void FixedUpdate()
     {
@@ -21,7 +22,19 @@ public class Background : MonoBehaviour
         if (transform.position.x <= -8 && !hasMadeNewBackground)
         {
             var newBackgroundPosition = new Vector2(31, transform.position.y);
-            Instantiate(background, newBackgroundPosition, Quaternion.identity);
+            Transform parent;
+            Debug.Log(gameObject.transform.parent);
+            if (gameObject.transform.tag == "Lane")
+            {
+                parent = GameObject.FindGameObjectWithTag("Lane").transform;
+                Instantiate(background, newBackgroundPosition, Quaternion.identity, parent);
+            }
+            else
+            {
+                Instantiate(background, newBackgroundPosition, Quaternion.identity);
+            }
+
+
             hasMadeNewBackground = true;
 
         }
