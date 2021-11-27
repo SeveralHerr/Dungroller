@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
-using UnityEditor.Animations;
+
 
 public class GoldBeetle : MonoBehaviour
 {
     public Animator animator;
     //public SpriteRenderer spriteRenderer;
 
-    public AnimatorController goldAnimationController;
+    public RuntimeAnimatorController goldAnimationController;
     
 
     public float goldTimer;

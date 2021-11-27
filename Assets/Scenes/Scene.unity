@@ -332,7 +332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232.7, y: 133.6}
+  m_AnchoredPosition: {x: 624, y: 427}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &259202330
@@ -658,7 +658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132.3, y: 133.6}
+  m_AnchoredPosition: {x: 516.64996, y: 427.00003}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627859287
@@ -1216,7 +1216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232.7, y: 203.8}
+  m_AnchoredPosition: {x: 624, y: 497.2}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079890425
@@ -1360,7 +1360,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132.3, y: 167.8}
+  m_AnchoredPosition: {x: 516.64996, y: 461.2}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1319708587
@@ -1768,7 +1768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232.7, y: 167.8}
+  m_AnchoredPosition: {x: 624, y: 461.2}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1565368289
@@ -1847,7 +1847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132.3, y: 203.8}
+  m_AnchoredPosition: {x: 516.64996, y: 497.2}
   m_SizeDelta: {x: 165.0634, y: 65.6296}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949741689
@@ -1904,6 +1904,7 @@ GameObject:
   - component: {fileID: 1958988950}
   - component: {fileID: 1958988949}
   - component: {fileID: 1958988952}
+  - component: {fileID: 1958988953}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2072,6 +2073,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1958988953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958988948}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1440
+  m_RefResolutionY: 1080
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 1
 --- !u!1 &2074861045
 GameObject:
   m_ObjectHideFlags: 0

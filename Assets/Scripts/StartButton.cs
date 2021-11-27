@@ -14,7 +14,7 @@ public class StartButton : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("Scene");
         }
     }
 }

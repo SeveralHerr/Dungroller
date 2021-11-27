@@ -1060,6 +1060,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
   - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
+  lanes: []
   objectTimer: 3
 --- !u!1 &899894045
 GameObject:
@@ -1331,6 +1332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laneObjects:
   - {fileID: 102748742337400618, guid: e689bcfcfa8974d4ab9afa3088d97b31, type: 3}
+  lanes: []
   objectTimer: 5
 --- !u!210 &1203575887
 SortingGroup:
@@ -1651,6 +1653,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
   - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
+  lanes: []
   objectTimer: 3
 --- !u!1 &1522483252
 GameObject:
@@ -1765,6 +1768,7 @@ MonoBehaviour:
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
   - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
+  lanes: []
   objectTimer: 3
 --- !u!1 &1565368287
 GameObject:
@@ -2261,6 +2265,10 @@ PrefabInstance:
     - target: {fileID: 2800061461966005504, guid: 05ebf73dbc60e414590585aa872e1b2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615690983707890289, guid: 05ebf73dbc60e414590585aa872e1b2d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3615690983707890289, guid: 05ebf73dbc60e414590585aa872e1b2d, type: 3}
       propertyPath: m_SortingOrder
