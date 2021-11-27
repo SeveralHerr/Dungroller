@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public List<GameObject> lanes;
     private int currentLane;
 
-    private const float horizontalMovement = 1f;
+    private const float horizontalMovement = 1.3f;
 
     private void Start()
     {

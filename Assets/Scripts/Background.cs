@@ -8,6 +8,7 @@ public class Background : MonoBehaviour
     public GameObject background;
     private bool hasMadeNewBackground = false;
     public float speedModifier = 1;
+    public float offset = 0;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class Background : MonoBehaviour
 
         if (transform.position.x <= -8 && !hasMadeNewBackground)
         {
-            var newBackgroundPosition = new Vector2(31, transform.position.y);
+            var newBackgroundPosition = new Vector2(31 + offset, transform.position.y);
             Transform parent;
 
             if (gameObject.transform.tag == "Lane")

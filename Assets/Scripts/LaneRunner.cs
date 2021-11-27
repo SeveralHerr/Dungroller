@@ -5,6 +5,7 @@ using UnityEngine;
 public class LaneRunner : MonoBehaviour
 {
     public List<GameObject> laneObjects;
+    public List<GameObject> lanes;
     public float objectTimer;
     private float currentTimer;
 
@@ -18,20 +19,16 @@ public class LaneRunner : MonoBehaviour
         currentTimer -= Time.deltaTime;
         if (currentTimer <= 0.0f)
         {
-            var skip = Random.Range(0, 1); 
-            if(skip == 0)
-            {
-                timerEnded();
-                currentTimer = objectTimer;
-            }
+            timerEnded();
+            currentTimer = objectTimer;
         }
     }
 
     private void timerEnded()
     {
         var randomLaneObject = Random.Range(0, laneObjects.Count);
-        var offset = Random.Range(3f, 119f);
-        var position = new Vector3(Constants.LaneStart + offset, transform.position.y + 0.5f);
+        var randomLane = Random.Range(0, lanes.Count);
+        var position = new Vector3(Constants.LaneStart, lanes[randomLane].transform.position.y + 0.5f);
         Instantiate(laneObjects[randomLaneObject], position, Quaternion.identity);
     }
 }
