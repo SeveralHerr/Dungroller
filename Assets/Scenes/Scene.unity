@@ -1136,17 +1136,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 4598871268252415777, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0968
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0484
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 4598871268252415804, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1266,6 +1278,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4598871268252415777, guid: f28f5ccffdce50a48aacf8ea57348198, type: 3}
   m_PrefabInstance: {fileID: 1016968729}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1182802542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182802538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b826756b755ee346a5b1343050f8e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1203575884
 GameObject:
   m_ObjectHideFlags: 0
@@ -1537,7 +1561,7 @@ MonoBehaviour:
   laneObjects:
   - {fileID: 5735415156852391447, guid: 1dbefb11ac88c074c94180f6d6adbf95, type: 3}
   - {fileID: 5735415156852391447, guid: b7ff72de65b856440820a5481bb5bea7, type: 3}
-  - {fileID: 5735415156852391447, guid: 15455cef6605faa41a953d27a908a360, type: 3}
+  - {fileID: 4720601752709110874, guid: 3545a5fb25e0eaa4e832a0f41cf7de9f, type: 3}
   - {fileID: 5735415156852391447, guid: 8866ed06c0da4194c9ee4c87582ba7c3, type: 3}
   lanes:
   - {fileID: 1421445443}
